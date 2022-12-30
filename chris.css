@@ -8,7 +8,7 @@ html{min-height: 100%;}
 }*/
 body{background-image: url("snow.png");
   background-repeat: no-repeat;
-  background-size: cover; overflow: hidden;height: 100%;background-color: white;}
+  background-size: cover; overflow: auto;height: 100%;background-color: white;}
 .fa-snowflake-o {
 	color: #fff;
 	position: absolute;
