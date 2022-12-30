@@ -46,7 +46,7 @@ function createSnowFlake() {
 	snow_flake.classList.add('fa-snowflake-o');
 
 	// Randomly generate the width to be between 10 and 20 px
-	snow_flake.style.width = Math.random() * 10 + 10 + 'px';
+	//snow_flake.style.width = Math.random() * 10 + 10 + 'px';
 
 	// Randomly generate the left position to be between 0 and the innerWidth of the screen
 	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
