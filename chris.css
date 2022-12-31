@@ -1,0 +1,372 @@
+html {
+  min-height: 100%;
+}
+body {
+  overflow: auto; background-image:linear-gradient(135deg,lightYellow,rgb(66, 176, 216),rgb(17, 82, 134));
+  height: 100%; text-align: center;
+  
+}
+.countdown-container {justify-content: center;justify-items: center;align-items: center;
+  display: flex;
+}
+.d{color: rgb(85, 83, 83);}
+.time {
+  display: flex;
+  font-size: 1.2em;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.time h1 {
+  margin-bottom: 0;
+}
+
+.time small {
+  color: #ccc;
+}
+.fa-snowflake-o {
+  color: #fff;
+  position: fixed;
+  top: -20px;
+  animation: fall linear forwards;
+}
+#text{font-size: 45px;font-weight: bold;margin: 70px auto 0px auto;}
+strong {
+  color: rgb(168, 4, 4);
+  text-align: center;
+  font-size: 75px;
+  font-weight: bold;
+  font-family: 'Tangerine', serif;
+  margin: 70px auto 0px auto;
+}
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+#copy {
+  background-color: black;
+  color: white;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 3;
+}
+.tri {
+  width: 180px;
+  height: 120px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: green;
+  margin: -30px auto 150px auto;
+  position: relative;
+  z-index: -2;
+}
+
+.low {
+  margin-top: -240px;
+}
+.high {
+  margin-top: -210px;
+}
+.wide {
+  width: 220px;
+}
+.wider {
+  width: 250px;
+}
+.widest {
+  width: 290px;
+}
+#root {
+  width: 25px;
+  height: 60px;
+  background-color: brown;
+  margin: 10px auto;
+  margin-top: -151px;
+}
+@keyframes star {
+  from {
+    background-color: rgb(248, 248, 160);
+  }
+  to {
+    background-color: rgb(255, 255, 0);
+    filter: drop-shadow(0 0 15px yellow) drop-shadow(0 0 15px yellow);
+  }
+}
+#star {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    82% 100%,
+    50% 70%,
+    19% 100%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  height: 100px;
+  width: 100px;
+  background-color: rgb(248, 248, 118);
+  z-index: -1;
+  margin: 30px auto 0px auto;
+  display: block;
+  position: relative;
+  top: 35px;
+}
+#shadow {
+  z-index: -1;
+  position: relative;
+}
+.starshadow,
+.staron {
+  animation-name: star;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes staroff {
+  from {
+    background-color: rgb(255, 255, 0);
+    filter: drop-shadow(0 0 15px yellow);
+  }
+  to {
+    background-color: rgb(248, 248, 160);
+    filter: drop-shadow(0 0 0 none);
+  }
+}
+.staroff,
+.shadowoff {
+  animation-name: staroff;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+}
+button {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  height: 30px;
+  width: 50px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+#on:hover{background-color: rgb(179, 176, 176);color: rgb(33, 99, 33);box-shadow: 0 5px rgb(138, 136, 136);}
+#off:hover{background-color: rgb(179, 176, 176);color: rgb(204, 57, 57);box-shadow: 0 5px rgb(138, 136, 136);;}
+button:active {
+  background-color: rgb(179, 176, 176);
+  box-shadow: 0 4px rgb(85, 85, 85);
+  transform: translateY(3px);
+}
+#btn {
+  text-align: center;
+}
+#on{background-color: rgb(33, 99, 33);}
+#off{background-color: rgb(204, 57, 57);}
+#con {
+  margin: -483px auto 90px auto;
+  position: relative;
+  z-index: -1;
+  width: 280px;
+  height: 410px;
+}
+.cir {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  z-index: -1;
+  position: relative;
+}
+@keyframes redc {
+  0% {
+    background-color: red;
+    box-shadow: 0px 0px 15px red,1px 1px 15px red,2px 2px 20px red,0px 0px 30px red;
+  }
+  50% {
+    background-color: yellow;
+    box-shadow: 0px 0px 15px yellow, 1px 1px 15px yellow, 2px 2px 20px yellow,0px 0px 30px yellow;
+  }
+  100% {
+    background-color: blue;
+    box-shadow: 0px 0px 15px blue,1px 1px 15px blue,2px 2px 20px blue,0px 0px 30px blue;
+  }
+}
+.red {
+  animation-name: redc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: red;
+}
+@keyframes yellowc {
+  0% {
+    background-color: yellow;
+    box-shadow: 0px 0px 15px yellow, 1px 1px 15px yellow, 2px 2px 20px yellow,0px 0px 30px yellow;
+  }
+  50% {
+    background-color: blue;
+    box-shadow: 0px 0px 15px blue,1px 1px 15px blue,2px 2px 20px blue,0px 0px 30px blue;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0px 0px 15px red,1px 1px 15px red,2px 2px 20px red,0px 0px 30px red;
+  }
+}
+.yellow {
+  animation-name: yellowc;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes bluec {
+  0% {
+    background-color: blue;
+    box-shadow: 0px 0px 15px blue,1px 1px 15px blue,2px 2px 20px blue,0px 0px 30px blue;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0px 0px 15px red,1px 1px 15px red,2px 2px 20px red,0px 0px 30px red;
+  }
+  100% {
+    background-color: yellow;
+    box-shadow: 0px 0px 15px yellow, 1px 1px 15px yellow, 2px 2px 20px yellow,0px 0px 30px yellow;
+  }
+}
+.blue {
+  animation-name: bluec;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.redoff {
+  background-color: rgb(245, 79, 79);
+}
+.yellowoff {
+  background-color: rgb(248, 248, 122);
+}
+.blueoff {
+  background-color: royalblue;
+}
+#a {
+  top: 60px;
+  left: 77px;
+}
+#b {
+  top: 70px;
+  left: 105px;
+}
+#c {
+  top: 58px;
+  left: 155px;
+}
+#d {
+  top: 20px;
+  left: 190px;
+}
+#e {
+  top: 70px;
+  left: 190px;
+}
+#f {
+  top: 60px;
+  left: 90px;
+}
+#g {
+  top: 70px;
+  left: 140px;
+}
+#h {
+  top: 75px;
+  left: 90px;
+}
+#i {
+  top: 60px;
+  left: 185px;
+}
+#j {
+  top: 70px;
+  left: 220px;
+}
+#k {
+  top: 90px;
+  left: 190px;
+}
+#l {
+  top: 50px;
+  left: 135px;
+}
+#m {
+  top: 33px;
+  left: 50px;
+}
+#n {
+  top: 55px;
+  left: 70px;
+}
+#o {
+  top: 90px;
+  left: 85px;
+}
+#p {
+  top: 45px;
+  left: 135px;
+}
+#q {
+  top: 55px;
+  left: 175px;
+}
+#r {
+  top: 30px;
+  left: 220px;
+}
+#s {
+  top: 20px;
+  left: 35px;
+}
+#t {
+  top: 43px;
+  left: 127px;
+}
+#u {
+  top: 58px;
+  left: 240px;
+}
+#v {
+  top: 30px;
+  left: 185px;
+}
+#w {
+  top: 10px;
+  left: 40px;
+}
+#x {
+  top: 35px;
+  left: 135px;
+}
+#y {
+  top: -5px;
+  left: 85px;
+}
+#z {
+  top: 15px;
+  left: 190px;
+}
+#ab {
+  top: -10px;
+  left: 20px;
+}
+#cd{
+  top: -8px;
+  left: 250px;
+}
+#ef{
+  top: -25px;
+  left: 65px;
+}
